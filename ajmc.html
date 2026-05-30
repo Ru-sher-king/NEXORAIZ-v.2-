@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXORAIZ</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- BIENVENIDA -->
+
+<div id="welcome">
+
+<div class="header">
+
+
+<h1>NEXORAIZ</h1>
+
+<p>
+Aprende Mayagna y Miskito de forma interactiva
+</p>
+
+</div>
+
+<div class="content">
+
+<button class="main-btn"
+onclick="openMenu()">
+🚀 Entrar al menú
+</button>
+
+</div>
+
+</div>
+
+<!-- MENÚ -->
+
+<div id="menu" class="hidden">
+
+<div class="header">
+
+<h1>Idiomas</h1>
+
+<p>Selecciona un idioma para comenzar</p>
+
+</div>
+
+<div class="content">
+
+<div class="language-card"
+onclick="selectLanguage('Mayagna')">
+
+<div class="language-icon">🟢</div>
+
+<div class="language-title">
+Mayagna
+</div>
+
+<div class="language-sub">
+Aprende palabras, frases y pronunciación
+</div>
+
+</div>
+
+<div class="language-card"
+onclick="selectLanguage('Miskito')">
+
+<div class="language-icon">🔵</div>
+
+<div class="language-title">
+Miskito
+</div>
+
+<div class="language-sub">
+Explora vocabulario y expresiones culturales
+</div>
+
+</div>
+
+<button class="back-btn"
+onclick="backToWelcome()">
+⬅️ Regresar
+</button>
+
+</div>
+
+</div>
+
+<!-- NIVELES -->
+
+<div id="levels" class="hidden">
+
+<div class="header">
+
+<h1 id="languageTitle"></h1>
+
+<p>Completa los niveles para desbloquear los siguientes</p>
+
+</div>
+
+<div class="content">
+
+<div class="map">
+
+<div onclick="openLevel(1)">
+<div class="level-node">1</div>
+<div class="level-text">Saludos</div>
+</div>
+
+<div class="line"></div>
+
+<div onclick="openLevel(2)">
+<div class="level-node locked" id="level2">🔒</div>
+<div class="level-text">Objetos</div>
+</div>
+
+<div class="line"></div>
+
+<div onclick="openLevel(3)">
+<div class="level-node locked" id="level3">🔒</div>
+<div class="level-text">Animales</div>
+</div>
+
+<div class="line"></div>
+
+<div onclick="openLevel(4)">
+<div class="level-node locked" id="level4">🔒</div>
+<div class="level-text">Comida</div>
+</div>
+
+<div class="line"></div>
+
+<div onclick="openLevel(5)">
+<div class="level-node locked" id="level5">🔒</div>
+<div class="level-text">Conversación</div>
+</div>
+
+</div>
+
+<button class="back-btn"
+onclick="backMenu()">
+⬅️ Regresar
+</button>
+
+</div>
+
+</div>
+
+<!-- JUEGO -->
+
+<div id="game" class="hidden">
+
+<div class="header">
+
+<h1 id="gameLanguage"></h1>
+
+<p id="levelName"></p>
+
+</div>
+
+<div class="content">
+
+<div class="top-info">
+
+<div>
+⭐ <span id="points">0</span>
+</div>
+
+<div>
+❤️ <span id="lives">❤️❤️❤️</span>
+</div>
+
+<div>
+📘 <span id="count">1</span>
+</div>
+
+</div>
+
+<div class="progress">
+<div class="bar" id="bar"></div>
+</div>
+
+<div class="question"
+id="question">
+</div>
+
+<div id="options"></div>
+
+<button class="back-btn"
+onclick="backLevels()">
+⬅️ Regresar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
