@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,197 +15,246 @@
 
 <div class="container">
 
-<!-- BIENVENIDA -->
+    
+    <div id="turismo">
 
-<div id="welcome">
+        <div class="turismo-app">
 
-<div class="header">
+    
+    <div class="turismo-header">
 
+        <button onclick="mostrarModulo('idiomas')" class="icon-btn">🗣 Idiomas</button>
 
-<h1>NEXORAIZ</h1>
+        <h2>NEXORAIZ</h2>
 
-<p>
-Aprende Mayagna y Miskito de forma interactiva
-</p>
+        <input 
+            type="text" 
+            id="searchPlace" 
+            placeholder="Buscar lugar en Nicaragua..."
+        />
 
-</div>
+    </div>
 
-<div class="content">
+    
+    <div class="turismo-map">
 
-<button class="main-btn"
-onclick="openMenu()">
-🚀 Entrar al menú
-</button>
+        <h3>🗺 Mapa de Nicaragua</h3>
 
-</div>
+        <div class="map-container">
 
-</div>
+            <div class="marker" onclick="showPlace('León')">📍 León</div>
+            <div class="marker" onclick="showPlace('Granada')">📍 Granada</div>
+            <div class="marker" onclick="showPlace('Masaya')">📍 Masaya</div>
+            <div class="marker" onclick="showPlace('Ometepe')">📍 Ometepe</div>
 
-<!-- MENÚ -->
+        </div>
 
-<div id="menu" class="hidden">
+    </div>
 
-<div class="header">
+    
+    <div class="turismo-info">
 
-<h1>Idiomas</h1>
+        <h3>Información del lugar</h3>
 
-<p>Selecciona un idioma para comenzar</p>
+        <p id="placeInfo">
+            Selecciona un lugar para ver información turística.
+        </p>
 
-</div>
+    </div>
 
-<div class="content">
+    </div>
 
-<div class="language-card"
-onclick="selectLanguage('Mayagna')">
+    </div>
 
-<div class="language-icon">🟢</div>
 
-<div class="language-title">
-Mayagna
-</div>
+    <div id="idiomas">
 
-<div class="language-sub">
-Aprende palabras, frases y pronunciación
-</div>
+<div class="nav-back">
+        <button onclick="mostrarModulo('turismo')">
+            ⬅ Turismo
+        </button>
+    </div>
 
-</div>
 
-<div class="language-card"
-onclick="selectLanguage('Miskito')">
+        <div id="welcome">
 
-<div class="language-icon">🔵</div>
+            <div class="header">
 
-<div class="language-title">
-Miskito
-</div>
+                <h1>NEXORAIZ</h1>
 
-<div class="language-sub">
-Explora vocabulario y expresiones culturales
-</div>
+                <p>
+                    ¡Aprende Mayagna y Miskito de forma interactiva!
+                </p>
 
-</div>
+            </div>
 
-<button class="back-btn"
-onclick="backToWelcome()">
-⬅️ Regresar
-</button>
+            <div class="content">
 
-</div>
+                <button class="main-btn"
+                onclick="openMenu()">
+                    🚀 Entrar al menú
+                </button>
 
-</div>
+            </div>
 
-<!-- NIVELES -->
+        </div>
 
-<div id="levels" class="hidden">
+        <div id="menu" class="hidden">
 
-<div class="header">
+            <div class="header">
 
-<h1 id="languageTitle"></h1>
+                <h1>Idiomas</h1>
 
-<p>Completa los niveles para desbloquear los siguientes</p>
+                <p>Selecciona un idioma para comenzar</p>
 
-</div>
+            </div>
 
-<div class="content">
+            <div class="content">
 
-<div class="map">
+                <div class="language-card"
+                onclick="selectLanguage('Mayagna')">
 
-<div onclick="openLevel(1)">
-<div class="level-node">1</div>
-<div class="level-text">Saludos</div>
-</div>
+                    <div class="language-icon">🟢</div>
 
-<div class="line"></div>
+                    <div class="language-title">
+                        Mayagna
+                    </div>
 
-<div onclick="openLevel(2)">
-<div class="level-node locked" id="level2">🔒</div>
-<div class="level-text">Objetos</div>
-</div>
+                    <div class="language-sub">
+                        Aprende palabras, frases y pronunciación
+                    </div>
 
-<div class="line"></div>
+                </div>
 
-<div onclick="openLevel(3)">
-<div class="level-node locked" id="level3">🔒</div>
-<div class="level-text">Animales</div>
-</div>
+                <div class="language-card"
+                onclick="selectLanguage('Miskito')">
 
-<div class="line"></div>
+                    <div class="language-icon">🔵</div>
 
-<div onclick="openLevel(4)">
-<div class="level-node locked" id="level4">🔒</div>
-<div class="level-text">Comida</div>
-</div>
+                    <div class="language-title">
+                        Miskito
+                    </div>
 
-<div class="line"></div>
+                    <div class="language-sub">
+                        Explora vocabulario y expresiones culturales
+                    </div>
 
-<div onclick="openLevel(5)">
-<div class="level-node locked" id="level5">🔒</div>
-<div class="level-text">Conversación</div>
-</div>
+                </div>
 
-</div>
+                <button class="back-btn"
+                onclick="backToWelcome()">
+                    ⬅️ Regresar
+                </button>
 
-<button class="back-btn"
-onclick="backMenu()">
-⬅️ Regresar
-</button>
+            </div>
 
-</div>
+        </div>
 
-</div>
+        <div id="levels" class="hidden">
 
-<!-- JUEGO -->
+            <div class="header">
 
-<div id="game" class="hidden">
+                <h1 id="languageTitle"></h1>
 
-<div class="header">
+                <p>Completa los niveles para desbloquear los siguientes</p>
 
-<h1 id="gameLanguage"></h1>
+            </div>
 
-<p id="levelName"></p>
+            <div class="content">
 
-</div>
+                <div class="map">
 
-<div class="content">
+                    <div onclick="openLevel(1)">
+                        <div class="level-node">1</div>
+                        <div class="level-text">Saludos</div>
+                    </div>
 
-<div class="top-info">
+                    <div class="line"></div>
 
-<div>
-⭐ <span id="points">0</span>
-</div>
+                    <div onclick="openLevel(2)">
+                        <div class="level-node locked" id="level2">🔒</div>
+                        <div class="level-text">Objetos</div>
+                    </div>
 
-<div>
-❤️ <span id="lives">❤️❤️❤️</span>
-</div>
+                    <div class="line"></div>
 
-<div>
-📘 <span id="count">1</span>
-</div>
+                    <div onclick="openLevel(3)">
+                        <div class="level-node locked" id="level3">🔒</div>
+                        <div class="level-text">Animales</div>
+                    </div>
 
-</div>
+                    <div class="line"></div>
 
-<div class="progress">
-<div class="bar" id="bar"></div>
-</div>
+                    <div onclick="openLevel(4)">
+                        <div class="level-node locked" id="level4">🔒</div>
+                        <div class="level-text">Comida</div>
+                    </div>
 
-<div class="question"
-id="question">
-</div>
+                    <div class="line"></div>
 
-<div id="options"></div>
+                    <div onclick="openLevel(5)">
+                        <div class="level-node locked" id="level5">🔒</div>
+                        <div class="level-text">Conversación</div>
+                    </div>
 
-<button class="back-btn"
-onclick="backLevels()">
-⬅️ Regresar
-</button>
+                </div>
 
-</div>
+                <button class="back-btn"
+                onclick="backMenu()">
+                    ⬅️ Regresar
+                </button>
 
-</div>
+            </div>
+
+        </div>
+
+        <div id="game" class="hidden">
+
+            <div class="header">
+
+                <h1 id="gameLanguage"></h1>
+
+                <p id="levelName"></p>
+
+            </div>
+
+            <div class="content">
+
+                <div class="top-info">
+
+                    <div>
+                        ⭐ <span id="points">0</span>
+                    </div>
+
+                    <div>
+                        ❤️ <span id="lives">❤️❤️❤️</span>
+                    </div>
+
+                    <div>
+                        📘 <span id="count">1</span>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+                    <div class="bar" id="bar"></div>
+                </div>
+
+                <div class="question" id="question"></div>
+
+                <div id="options"></div>
+
+                <button class="back-btn"
+                onclick="backLevels()">
+                    ⬅️ Regresar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 <script src="js/idiomas.js"></script>
-
-</body>
-</html>

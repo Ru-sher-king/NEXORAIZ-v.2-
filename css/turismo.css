@@ -1,0 +1,62 @@
+.turismo-app{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    background:#f5f7fb;
+}
+
+
+.turismo-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px;
+    background:#58cc02;
+    color:white;
+}
+
+.turismo-header h2{
+    font-size:18px;
+}
+
+.turismo-header input{
+    width:50%;
+    padding:8px;
+    border-radius:10px;
+    border:none;
+}
+
+
+.turismo-map{
+    flex:1;
+    padding:20px;
+    text-align:center;
+}
+
+.map-container{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+}
+
+.marker{
+    background:white;
+    padding:10px 15px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.marker:hover{
+    transform:scale(1.05);
+}
+
+
+.turismo-info{
+    padding:15px;
+    background:white;
+    border-top:2px solid #ddd;
+}
