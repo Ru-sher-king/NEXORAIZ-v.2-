@@ -1,7 +1,7 @@
 .turismo-app{
     display:flex;
     flex-direction:column;
-    height:100%;
+    min-height:100vh;
     background:#f5f7fb;
 }
 
@@ -36,8 +36,10 @@
 .map-container{
     margin-top:20px;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap: wrap;
     gap:15px;
+    justify-content: center;
     align-items:center;
 }
 
