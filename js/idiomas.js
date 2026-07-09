@@ -149,7 +149,7 @@ a:"Baiki nani"
 
 };
 
-function openMenu(){
+ function openMenu(){
 
 hideAll();
 

@@ -8,22 +8,26 @@ window.onload = function(){
         leyendas: document.getElementById("leyendas")
     };
 
-    initTurismo();
-    initLeyendas();
+    if (typeof initTurismo === "function") initTurismo();
+    if (typeof initLeyendas === "function") initLeyendas();
 
     mostrarModulo("inicio");
 }
 
 function mostrarModulo(nombreModulo){
+    if (!modulos[nombreModulo]) return;
+
     for(let key in modulos){
-        modulos[key].classList.remove("active-modulo");
-        modulos[key].style.display = "none";
+        if (modulos[key]) {
+            modulos[key].style.setProperty("display", "none", "important");
+            modulos[key].classList.remove("active-modulo");
+        }
         
         const btn = document.getElementById(`btn-${key}`);
         if(btn) btn.classList.remove("btn-activo");
     }
 
-    modulos[nombreModulo].style.display = "block";
+    modulos[nombreModulo].style.setProperty("display", "block", "important");
     modulos[nombreModulo].classList.add("active-modulo");
 
     const btnActivo = document.getElementById(`btn-${nombreModulo}`);

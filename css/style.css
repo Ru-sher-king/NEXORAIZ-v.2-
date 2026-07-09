@@ -36,7 +36,6 @@ position:relative;
 overflow:hidden;
 }
 
-/* GUARDABARRANCO */
 
 .bird{
 width:140px;
@@ -64,7 +63,6 @@ font-size:15px;
 opacity:.9;
 }
 
-/* CONTENT */
 
 .content{
 padding:25px;
@@ -76,8 +74,6 @@ cursor:pointer;
 transition:.3s;
 font-weight:bold;
 }
-
-/* BOTÓN PRINCIPAL */
 
 .main-btn{
 width:100%;
@@ -95,7 +91,6 @@ transform:translateY(-2px);
 background:#4db602;
 }
 
-/* IDIOMAS */
 
 .language-card{
 background:#f7f7f7;
@@ -128,7 +123,6 @@ margin-top:5px;
 color:#666;
 }
 
-/* MAPA DE NIVELES */
 
 .map{
 margin-top:20px;
@@ -180,7 +174,6 @@ background:#58cc02;
 border-radius:20px;
 }
 
-/* JUEGO */
 
 .progress{
 width:100%;
@@ -244,7 +237,6 @@ font-size:16px;
 background:#e43f3f;
 }
 
-/* FINAL */
 
 .complete{
 text-align:center;
@@ -263,7 +255,7 @@ margin-bottom:20px;
 }
 
 .hidden{
-display:none;
+display:none !important;
 }
 
 #welcome, #menu, #levels, #game {
@@ -279,4 +271,11 @@ display:none;
 #idiomas .header {
     border-radius: 15px 15px 0 0;
     margin: -20px -20px 20px -20px;
+}
+
+.hidden {
+    display: none !important;
+}
+#idiomas {
+    width: 100%;
 }
