@@ -46,7 +46,8 @@
 
 .map-container {
     position: relative;
-    width: 100%;
+    width: 100% !important;
+    height: 450px !important;
     flex: 1;
     background: #eef3f7;
     border-radius: 12px;

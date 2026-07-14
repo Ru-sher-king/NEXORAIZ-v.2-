@@ -32,4 +32,10 @@ function mostrarModulo(nombreModulo){
 
     const btnActivo = document.getElementById(`btn-${nombreModulo}`);
     if(btnActivo) btnActivo.classList.add("btn-activo");
+
+    if (nombreModulo === "turismo" && typeof map !== "undefined" && map) {
+        setTimeout(() => {
+            map.invalidateSize();
+        }, 150);
+        }
 }

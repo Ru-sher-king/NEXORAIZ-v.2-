@@ -17,6 +17,10 @@ function initTurismo() {
     L.control.layers(capasDisponibles, null, { position: 'topright' }).addTo(map);
     markersGroup = L.layerGroup().addTo(map);
     renderDestinos(NexoData.turismo);
+
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 200); 
 }
 
 function renderDestinos(lista) {
