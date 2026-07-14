@@ -40,17 +40,22 @@ const NexoData = {
     
     idiomas: {
         Mayagna: {
-            
             1: [
-                { q: "¿Cómo se dice Hola?", o: ["Yamni", "Perro", "Casa"], a: "Yamni", audio: "audio/mayagna/hola.mp3" }
+                { q: "¿Cómo se dice Hola en Mayagna?", o: ["Yamni", "Perro", "Casa"], a: "Yamni", audio: "audio/mayagna/hola.mp3" },
+                { q: "¿Cómo se dice Adiós en Mayagna?", o: ["Baiki", "Sol", "Luna"], a: "Baiki", audio: "audio/mayagna/adios.mp3" }
+            ],
+            2: [
+                { q: "¿Cómo se dice Casa en Mayagna?", o: ["Uma", "Kiri", "Laya"], a: "Uma", audio: "audio/mayagna/casa.mp3" }
             ]
         },
         Miskito: {
-           
             1: [
-                { q: "¿Cómo se dice Hola en Miskito?", o: ["Naksa", "Kura", "Uma"], a: "Naksa", audio: "audio/miskito/hola.mp3" }
+                { q: "¿Cómo se dice Hola en Miskito?", o: ["Naksa", "Kura", "Uma"], a: "Naksa", audio: "audio/miskito/hola.mp3" },
+                { q: "¿Cómo se dice Adiós en Miskito?", o: ["Aisabe", "Pana", "Kura"], a: "Aisabe", audio: "audio/miskito/adios.mp3" }
             ],
-            2: [ /* Tus datos actuales */ ]
+            2: [
+                { q: "¿Cómo se dice Casa en Miskito?", o: ["Watla", "Was", "Pani"], a: "Watla", audio: "audio/miskito/casa.mp3" }
+            ]
         }
     },
 
