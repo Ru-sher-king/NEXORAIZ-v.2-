@@ -5,6 +5,16 @@ function initTurismo() {
 function renderDestinos(lista) {
     const container = document.getElementById("mapContainer");
     container.innerHTML = "";
+
+    const mapaImg = document.createElement("img");
+    mapaImg.src = "images/turismo/mapa-nicaragua.png"; 
+    mapaImg.className = "mapa-fondo-img";
+    
+    mapaImg.onerror = () => {
+        mapaImg.style.display = 'none';
+        container.classList.add("mapa-fallback-bg");
+    };
+    container.appendChild(mapaImg);
     
     if(lista.length === 0) {
         container.innerHTML = "<p class='no-results'>No se encontraron destinos.</p>";
@@ -13,9 +23,19 @@ function renderDestinos(lista) {
 
     lista.forEach(lugar => {
         const btn = document.createElement("div");
-        btn.className = "marker-card";
-        btn.innerHTML = `📍 ${lugar.nombre}`;
-        btn.onclick = () => verDetalleTurismo(lugar.id);
+        btn.className = "map-marker-btn animated-bounce";
+        btn.style.left = `${lugar.coordenadas.x}%`;
+        btn.style.top = `${lugar.coordenadas.y}%`;
+        btn.innerHTML = `
+            <div class="btn-icon">📍</div>
+            <div class="btn-tooltip">${lugar.nombre}</div>
+        `;
+        
+        btn.onclick = () => {
+            document.querySelectorAll('.map-marker-btn').forEach(p => p.classList.remove('btn-activo'));
+            btn.classList.add('btn-activo');
+            verDetalleTurismo(lugar.id);
+        };
         container.appendChild(btn);
     });
 }
