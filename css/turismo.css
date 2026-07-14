@@ -1,6 +1,8 @@
+/*Asistencia de Inteligencia Artificial "Google Gemini*/
+
 .turismo-layout {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Dividido en dos columnas: Mapa y Detalles */
+    grid-template-columns: 1.2fr 1fr; 
     gap: 25px;
     height: calc(100vh - 120px);
     max-width: 1400px;
@@ -14,7 +16,7 @@
     }
 }
 
-/* PANEL DEL MAPA */
+
 .turismo-map-panel {
     background: #ffffff;
     border-radius: 16px;
@@ -41,7 +43,7 @@
     box-shadow: 0 0 0 4px rgba(88, 204, 2, 0.15);
 }
 
-/* CONTENEDOR DEL MAPA INTERACTIVO */
+
 .map-container {
     position: relative;
     width: 100%;
@@ -51,67 +53,14 @@
     overflow: hidden;
     border: 1px solid #dcdcdc;
     min-height: 450px;
-}
-
-.mapa-fondo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Se adapta sin deformarse */
-    display: block;
+    z-index: 1;
 }
 
 .mapa-fallback-bg {
     background: linear-gradient(135deg, #e0f2fe 0%, #b9e6fe 100%);
 }
 
-/* PINES INTERACTIVOS (MARCADORES) */
-.map-marker-pin {
-    position: absolute;
-    cursor: pointer;
-    z-index: 10;
-    transform: translate(-50%, -50%); /* Centra el pin exactamente en la coordenada */
-    transition: transform 0.2s ease;
-}
 
-.pin-icon {
-    font-size: 28px;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-    transition: all 0.2s ease;
-}
-
-/* TOOLTIP CON EL NOMBRE DEL LUGAR */
-.pin-tooltip {
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%) translateY(5px);
-    background: #191919;
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 700;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* INTERACCIONES Y HOVERS */
-.map-marker-pin:hover .pin-icon,
-.map-marker-pin.pin-activo .pin-icon {
-    transform: scale(1.3);
-}
-
-.map-marker-pin:hover .pin-tooltip,
-.map-marker-pin.pin-activo .pin-tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* PANEL DE INFORMACIÓN DETALLADA */
 .turismo-info-panel {
     background: #ffffff;
     border-radius: 16px;
@@ -131,7 +80,7 @@
     padding: 40px;
 }
 
-/* TARJETA MODERNA DE DESTINO */
+
 .place-card-modern {
     height: 100%;
     display: flex;
@@ -189,7 +138,7 @@
     display: block;
 }
 
-/* BADGES PARA LOS LUGARES IMPERDIBLES */
+
 .badges-grid {
     display: flex;
     flex-wrap: wrap;
@@ -207,7 +156,7 @@
     font-weight: 600;
 }
 
-/* ANIMACIONES */
+
 .animate-fade-in {
     animation: fadeIn 0.3s ease-in-out forwards;
 }

@@ -3,7 +3,7 @@ const NexoData = {
         {
             id: "leon",
             nombre: "León",
-            coordenadas: { x: 25, y: 60 }, 
+            coordenadas: { lat: 12.4378, lng: -86.8780 },
             descripcion: "Ciudad universitaria y colonial, cuna de poetas y hogar de la imponente Catedral de León.",
             imagen: "images/turismo/leon.jpg",
             video: "videos/turismo/leon.mp4",
@@ -12,7 +12,7 @@ const NexoData = {
         {
             id: "granada",
             nombre: "Granada",
-            coordenadas: { x: 45, y: 75 },
+            coordenadas: { lat: 11.9310, lng: -85.9560 },
             descripcion: "La Gran Sultana, famosa por su arquitectura colonial perfectamente conservada y las bellas Isletas en el Lago Cocibolca.",
             imagen: "images/turismo/granada.jpg",
             video: "videos/turismo/granada.mp4",
@@ -21,7 +21,7 @@ const NexoData = {
         {
             id: "masaya",
             nombre: "Masaya",
-            coordenadas: { x: 40, y: 70 },
+            coordenadas: { lat: 11.9744, lng: -86.0942 },
             descripcion: "Capital del folklore nicaragüense, hogar del majestuoso e imponente Volcán Masaya y su mercado de artesanías.",
             imagen: "images/turismo/masaya.jpg",
             video: "videos/turismo/masaya.mp4",
@@ -30,7 +30,7 @@ const NexoData = {
         {
             id: "ometepe",
             nombre: "Isla de Ometepe",
-            coordenadas: { x: 60, y: 85 },
+            coordenadas: { lat: 11.5034, lng: -85.6171 },
             descripcion: "Una isla paradisíaca en medio del Gran Lago, formada por dos colosales volcanes: el Concepción y el Maderas.",
             imagen: "images/turismo/ometepe.jpg",
             video: "videos/turismo/ometepe.mp4",
