@@ -9,6 +9,57 @@ const NexoData = {
             video: "videos/turismo/leon.mp4",
             imperdibles: ["Catedral de León", "Hervideros de San Jacinto", "Las Peñitas"]
         },
+
+        {
+            id: "boaco",
+            nombre: "Boaco",
+            coordenadas: { lat: 12.472657, lng: -85.659963 },
+            descripcion: "Conocida como la Ciudad de Dos Pisos, destaca por la ganadería y la producción de leche y queso.",
+            imagen: "images/turismo/boaco.jpg",
+            video: "videos/turismo/boaco.mp4",
+            imperdibles: ["Cascada El Timal", "Cerro Musún", "Parque Nacional Cerro Cumaica - Cerro Alegre"]
+        },
+
+        {
+            id: "carazo",
+            nombre: "Carazo",
+            coordenadas: { lat: 11.856628, lng: -86.240613 },
+            descripcion: "Fue muy reconocido por sus cultivos de café. Actualmente destacan sus paisajes naturales, además de contar con importantes playas en el Pacífico.",
+            imagen: "images/turismo/carazo.jpg",
+            video: "videos/turismo/carazo.mp4",
+            imperdibles: ["Playa La Boquita", "Reserva La Makina", "Restaurante Vilas"]
+        },
+        
+        {
+            id: "chinandega",
+            nombre: "Chinandega",
+            coordenadas: { lat: 12.631084, lng: -87.134736 },
+            descripcion: "Es uno de los departamentos más productivos del país, reconocido por el cultivo de caña de azúcar, maní y por albergar el volcán San Cristóbal.",
+            imagen: "images/turismo/chinandega.jpg",
+            video: "videos/turismo/chinandega.mp4",
+            imperdibles: ["Volcán San Cristóbal", "Playa Jiquilillo", "Reserva Natural Isla Juan Venado"]
+        },
+
+        {
+            id: "chontales",
+            nombre: "Chontales",
+            coordenadas: { lat: 11.968587, lng: -85.170082 },
+            descripcion: "Destaca por la ganadería y la producción de carne y lácteos. También posee importantes recursos mineros.",
+            imagen: "images/turismo/chontales.jpg",
+            video: "videos/turismo/chontales.mp4",
+            imperdibles: ["Lago de Apanás", "Cueva de Cuapa", "Río Mayales"]
+        },
+
+        {
+            id: "estelí",
+            nombre: "Estelí",
+            coordenadas: { lat: 13.092881, lng: -86.356289 },
+            descripcion: "Es reconocido internacionalmente por la fabricación de puros de alta calidad y por su actividad comercial.",
+            imagen: "images/turismo/estelí.jpg",
+            video: "videos/turismo/estelí.mp4",
+            imperdibles: ["Reserva Natural Tisey - Estanzuela", "Mirador Estelí", "Estadio Independencia"]
+        },
+
         {
             id: "granada",
             nombre: "Granada",
@@ -28,13 +79,93 @@ const NexoData = {
             imperdibles: ["Volcán Masaya (Santiago)", "Mercado de Artesanías", "Mirador de Catarina"]
         },
         {
-            id: "ometepe",
-            nombre: "Isla de Ometepe",
+            id: "rivas",
+            nombre: "Rivas",
             coordenadas: { lat: 11.5034, lng: -85.6171 },
             descripcion: "Una isla paradisíaca en medio del Gran Lago, formada por dos colosales volcanes: el Concepción y el Maderas.",
             imagen: "images/turismo/ometepe.jpg",
             video: "videos/turismo/ometepe.mp4",
-            imperdibles: ["Ojo de Agua", "Punta Jesús María", "Cascada de San Ramón"]
+            imperdibles: ["Isla de Ometepe", "Punta Jesús María", "Cascada de San Ramón"]
+        },
+
+        {
+            id: "jinotega",
+            nombre: "Jinotega",
+            coordenadas: { lat: 13.776067, lng: -85.407329 },
+            descripcion: "Conocido como la Ciudad de las Brumas, es el principal productor de café de Nicaragua y posee un clima fresco.",
+            imagen: "images/turismo/jinotega.jpg",
+            video: "videos/turismo/jinotega.mp4",
+            imperdibles: ["Lago de Apanás", "Cascada de la Luna", "Reserva Natural Cerro Datanlí - El Diablo"]
+        },
+
+        {
+            id: "madriz",
+            nombre: "Madriz",
+            coordenadas: { lat: 13.39914, lng: -86.39872 },
+            descripcion: "Es un departamento montañoso dedicado principalmente a la agricultura, especialmente al cultivo de café y granos básicos.",
+            imagen: "images/turismo/madriz.jpg",
+            video: "videos/turismo/madriz.mp4",
+            imperdibles: ["Cañón de Somoto", "Cerro Mogotón", "Reserva Natural Tepesomoto - Pataste"]
+        },
+
+        {
+            id: "managua",
+            nombre: "Managua",
+            coordenadas: { lat: 12.12103, lng: -86.26059 },
+            descripcion: "Es la capital de Nicaragua y el principal centro político, económico y comercial del país.",
+            imagen: "images/turismo/managua.jpg",
+            video: "videos/turismo/managua.mp4",
+            imperdibles: ["Loma de Tiscapa", "Puerto Salvador Allende", "Reserva Natural Chocoyero - El Brujo"]
+        },
+
+        {
+            id: "matagalpa",
+            nombre: "Matagalpa",
+            coordenadas: { lat: 12.92359, lng: -85.92261 },
+            descripcion: "Destaca por la producción de café, cacao y hortalizas, además de su clima agradable y montañoso.",
+            imagen: "images/turismo/matagalpa.jpg",
+            video: "videos/turismo/matagalpa.mp4",
+            imperdibles: ["Selva Negra", "Cascada Blanca", "Reserva Natural Cerro Apante"]
+        },
+
+        {
+            id: "nuevasegovia",
+            nombre: "Nueva Segovia",
+            coordenadas: { lat: 13.77248, lng: -86.05874 },
+            descripcion: "Es reconocida por sus bosques de pino, el cultivo de café y su importancia histórica durante distintos conflictos del país.",
+            imagen: "images/turismo/nuevasegovia.jpg",
+            video: "videos/turismo/nuevasegovia.mp4",
+            imperdibles: ["Aguas Termales don Alfonso", "Cerro Mogotón", "Reserva Natural Tepesomoto - Pataste"]
+        },
+
+        {
+            id: "riosanjuan",
+            nombre: "Río San Juan",
+            coordenadas: { lat: 11.131076, lng: -84.776012 },
+            descripcion: "Se caracteriza por su riqueza natural, el río San Juan y la Reserva Biológica Indio Maíz, una de las más importantes de Centroamérica.",
+            imagen: "images/turismo/riosanjuan.jpg",
+            video: "videos/turismo/riosanjuan.mp4",
+            imperdibles: ["Reserva Biológica Indio Maíz", "Castillo de la Inmaculada Concepción", "Archipiélago de Solentiname"]
+        },
+
+        {
+            id: "RACCN",
+            nombre: "Región Atlántica Costa Caribe Norte (RACCN)",
+            coordenadas: { lat: 13.92231, lng: -84.40657 },
+            descripcion: "Posee una gran diversidad cultural y étnica. Su economía se basa en la pesca, la minería y los recursos forestales.",
+            imagen: "images/turismo/RACCN.jpg",
+            video: "videos/turismo/RACCN.mp4",
+            imperdibles: ["Puerto Cabezas", "Cayos Miskitos", "Reserva de Biosfera Bosawás"]
+        },
+
+        {
+            id: "RACCS",
+            nombre: "Ragión Atlántica Costa Caribe Sur (RACCS)",
+            coordenadas: { lat: 11.6899, lng: -84.4553 },
+            descripcion: "Destaca por sus playas caribeñas, la pesca, el turismo ecológico y la convivencia de diversas comunidades indígenas y afrodescendientes.",
+            imagen: "images/turismo/RACCS.jpg",
+            video: "videos/turismo/RACCS.mp4",
+            imperdibles: ["Laguna de Perlas", "Bilwi", "Corn Island"]
         }
     ],
     

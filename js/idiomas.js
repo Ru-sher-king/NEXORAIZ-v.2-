@@ -2,7 +2,7 @@ let language = "";
 let level = 1;
 let index = 0;
 let points = 0;
-let lives = 3;
+let lives = 5;
 let unlockedLevel = 1;
 
 function obtenerPreguntas() {
@@ -28,7 +28,6 @@ function selectLanguage(lang) {
     document.getElementById("levels").classList.remove("hidden");
     document.getElementById("languageTitle").innerHTML = lang;
     
-    // Opcional: Reiniciar progreso visual de niveles al cambiar de idioma
     unlockedLevel = 1;
     for (let i = 2; i <= 5; i++) {
         let node = document.getElementById("level" + i);
@@ -56,7 +55,7 @@ function startLevel(lv) {
     level = lv;
     index = 0;
     points = 0;
-    lives = 3;
+    lives = 5;
 
     updateLives();
     document.getElementById("points").innerHTML = points;
