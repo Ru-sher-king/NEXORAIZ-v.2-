@@ -2,17 +2,26 @@ let map;
 let markersGroup;
 
 function initTurismo() {
-    if (map) return;
+    if (map) {
+        setTimeout(() => { map.invalidateSize(); }, 50);
+        return;
+    }
+
     map = L.map('mapContainer').setView([12.6, -85.5], 7.5);
-    const mapaSatelital = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles © Esri'
-    }).addTo(map);
     const mapaCalles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap'
+        attribution: '© OpenStreetMap contributors',
+        className: 'osm-layer',
+        userAgent: 'NexoRaiz/1.0 (contacto@nexoraiz.com)' 
     });
+    
+    const mapaSatelital = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles © Esri &mdash; Source: Esri, iCubic, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+    });
+
+    mapaCalles.addTo(map);
     const capasDisponibles = {
+        "📍 Calles (OpenStreetMap)": mapaCalles,
         "🗺️ Satélite": mapaSatelital,
-        "📍 Calles": mapaCalles
     };
     L.control.layers(capasDisponibles, null, { position: 'topright' }).addTo(map);
     markersGroup = L.layerGroup().addTo(map);
@@ -20,44 +29,27 @@ function initTurismo() {
 
     setTimeout(() => {
         map.invalidateSize();
-    }, 200); 
+    }, 200);
 }
 
 function renderDestinos(lista) {
-    markersGroup.clearLayers()
-    const container = document.getElementById("mapContainer");
-    container.innerHTML = "";
+    markersGroup.clearLayers();
 
-    const mapaImg = document.createElement("img");
-    mapaImg.src = "images/turismo/mapa-nicaragua.png"; 
-    mapaImg.className = "mapa-fondo-img";
-    
-    mapaImg.onerror = () => {
-        mapaImg.style.display = 'none';
-        container.classList.add("mapa-fallback-bg");
-    };
-    container.appendChild(mapaImg);
-    
-    if(lista.length === 0) {
-        container.innerHTML = "<p class='no-results'>No se encontraron destinos.</p>";
+    if (lista.length === 0) {
+        console.log("No se encontraron destinos coincidentes.");
         return;
     }
 
-lista.forEach(lugar => {
-        // Leaflet maneja sus propios marcadores visuales estándar.
-        // Colocamos el marcador en su Latitud y Longitud real
+    lista.forEach(lugar => {
         const marker = L.marker([lugar.coordenadas.lat, lugar.coordenadas.lng]);
 
-        // Tooltip flotante al pasar el mouse por encima
         marker.bindTooltip(lugar.nombre, {
-            permanent: false, 
+            permanent: false,
             direction: 'top'
         });
 
-        // Evento interactivo al hacer clic
         marker.on('click', () => {
             verDetalleTurismo(lugar.id);
-            // Suave paneo de cámara al destino (Efecto "flyTo" de Google Earth)
             map.flyTo([lugar.coordenadas.lat, lugar.coordenadas.lng], 10, {
                 animate: true,
                 duration: 1.2
@@ -68,31 +60,33 @@ lista.forEach(lugar => {
     });
 }
 
-// Conservamos exactamente tu función de detalle original pero adaptada a tu clase moderna
 function verDetalleTurismo(idLugar) {
     const lugar = NexoData.turismo.find(l => l.id === idLugar);
     const panel = document.getElementById("placeDetails");
     
+    if (!lugar) return;
+
     panel.classList.remove("empty");
     panel.innerHTML = `
         <div class="place-card-modern animate-fade-in">
-            <div class="place-hero-image" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%), url('${lugar.imagen}');">
-                <h2>${lugar.nombre}</h2>
+            <div class="place-hero-image" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%), url('${lugar.imagen}'); height: 200px; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 15px; border-radius: 8px 8px 0 0;">
+                <h2 style="color: white; margin: 0; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">${lugar.nombre}</h2>
             </div>
-            <div class="place-body-content">
+            
+            <div class="place-body-content" style="padding: 15px;">
                 <p class="description-text">${lugar.descripcion}</p>
                 
-                <div class="media-section">
+                <div class="media-section" style="margin-top: 15px;">
                     <h4>📹 Video Promocional:</h4>
                     <div class="video-container-wrapper">
-                        <video controls class="modern-video" src="${lugar.video}" poster="${lugar.imagen}"></video>
+                        <video controls class="modern-video" src="${lugar.video}" poster="${lugar.imagen}" style="width: 100%; border-radius: 6px;"></video>
                     </div>
                 </div>
                 
-                <div class="imperdibles-section">
+                <div class="imperdibles-section" style="margin-top: 15px;">
                     <h4>📌 Sitios Imperdibles:</h4>
-                    <div class="badges-grid">
-                        ${lugar.imperdibles.map(item => `<span class="imperdible-badge">✨ ${item}</span>`).join('')}
+                    <div class="badges-grid" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
+                        ${lugar.imperdibles.map(item => `<span class="imperdible-badge" style="background: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 12px; font-size: 0.85em; font-weight: bold;">✨ ${item}</span>`).join('')}
                     </div>
                 </div>
             </div>
