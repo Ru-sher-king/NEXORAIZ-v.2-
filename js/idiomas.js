@@ -55,7 +55,7 @@ function startLevel(lv) {
     level = lv;
     index = 0;
     points = 0;
-    lives = 5;
+    lives = 4;
 
     updateLives();
     document.getElementById("points").innerHTML = points;
@@ -167,7 +167,7 @@ function updateLives() {
 function restartLevel() {
     index = 0;
     points = 0;
-    lives = 3;
+    lives = 5;
     document.getElementById("points").innerHTML = points;
     updateLives();
     loadQuestion();
