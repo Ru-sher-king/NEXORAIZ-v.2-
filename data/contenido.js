@@ -172,8 +172,14 @@ const NexoData = {
     idiomas: {
         Mayagna: {
             1: [
-                { q: "¿Cómo se dice Hola en Mayagna?", o: ["Yamni", "Perro", "Casa"], a: "Yamni", audio: "audio/mayagna/hola.mp3" },
-                { q: "¿Cómo se dice Adiós en Mayagna?", o: ["Baiki", "Sol", "Luna"], a: "Baiki", audio: "audio/mayagna/adios.mp3" }
+                { q: "¿Cómo se dice Hola?", o: ["Yamni", "Bonjour", "Tinki"], a: "Yamni", audio: "audio/mayagna/hola.mp3" },
+                { q: "¿Cómo dirías Adiós?", o: ["A presto", "Pronto", "Baiki"], a: "Baiki", audio: "audio/mayagna/adios.mp3" },
+                { q: "¿Cómo estás? se dice...", o: ["Nahnki Sma?", "Como você está?", "Come va?"], a: "Nahnki Sma?", audio: "audio/mayagna/adios.mp3" },
+                { q: "Gracias es equivalente a...", o: ["Paopao", "Tinki", "Grazie"], a: "Tinki", audio: "audio/mayagna/adios.mp3" },
+                { q: "Para decir Por favor, se usa...", o: ["Per Favore", "Pliskam Pali", "Tintan Yamni"], a: "Pliskam Pali", audio: "audio/mayagna/adios.mp3" },
+                { q: "Buenas Tardes", o: ["Tutni Yamni", "Bon après-midi", "Titan Yamini"], a: "Tutni Yamni", audio: "audio/mayagna/adios.mp3" },
+                { q: "¿Cómo se dice buenos dias en Mayagna?", o: ["Titan Yamni", "Buongiornno", "Paopao"], a: "Titan Yamni", audio: "audio/mayagna/adios.mp3" },
+                { q: "Bienvenido", o: ["Bem vindo", "Yamni Balram", "Tinki"], a: "Yamni Balram", audio: "audio/mayagna/adios.mp3" }
             ],
             2: [
                 { q: "¿Cómo se dice Casa en Mayagna?", o: ["Uma", "Kiri", "Laya"], a: "Uma", audio: "audio/mayagna/casa.mp3" }
