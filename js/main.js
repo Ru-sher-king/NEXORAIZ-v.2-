@@ -5,7 +5,8 @@ window.onload = function(){
         inicio: document.getElementById("inicio"),
         turismo: document.getElementById("turismo"),
         idiomas: document.getElementById("idiomas"),
-        leyendas: document.getElementById("leyendas")
+        leyendas: document.getElementById("leyendas"),
+        nosotros: document.getElementById("nosotros")
     };
 
     if (typeof initTurismo === "function") initTurismo();
