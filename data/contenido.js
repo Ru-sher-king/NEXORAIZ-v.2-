@@ -83,8 +83,8 @@ const NexoData = {
             nombre: "Rivas",
             coordenadas: { lat: 11.5034, lng: -85.6171 },
             descripcion: "Una isla paradisíaca en medio del Gran Lago, formada por dos colosales volcanes: el Concepción y el Maderas.",
-            imagen: "images/turismo/ometepe.jpg",
-            video: "videos/turismo/ometepe.mp4",
+            imagen: "images/turismo/rivas.jpg",
+            video: "videos/turismo/rivas.mp4",
             imperdibles: ["Isla de Ometepe", "Punta Jesús María", "Cascada de San Ramón"]
         },
 
