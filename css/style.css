@@ -28,11 +28,10 @@ box-shadow:none;
 
 .header{
 background:#58cc02;
-padding:35px 20px;
-text-align:center;
-color:white;
-position:relative;
-overflow:hidden;
+    padding:50px 30px;
+    text-align:center;
+    color:white;
+    border-radius:15px 15px 0 0;
 }
 
 
@@ -64,7 +63,12 @@ opacity:.9;
 
 
 .content{
-padding:25px;
+flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:30px;
 }
 
 button{
@@ -81,7 +85,8 @@ border-radius:18px;
 background:#58cc02;
 color:white;
 font-size:18px;
-margin-top:20px;
+max-width:450px;
+margin:25px auto 0;
 box-shadow:0 5px 0 #3f9300;
 }
 
@@ -99,6 +104,7 @@ border-radius:20px;
 margin-bottom:15px;
 transition:.3s;
 cursor:pointer;
+width:100%;
 }
 
 .language-card:hover{
@@ -257,24 +263,18 @@ margin-bottom:20px;
 display:none !important;
 }
 
-#welcome, #menu, #levels, #game {
-    max-width: 500px;
-    margin: 40px auto; 
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
-}
-
-
-#idiomas .header {
-    border-radius: 15px 15px 0 0;
-    margin: -20px -20px 20px -20px;
-}
-
-.hidden {
-    display: none !important;
-}
-#idiomas {
-    width: 100%;
+#welcome,
+#menu,
+#levels,
+#game{
+    width:100%;
+    max-width:100%;
+    min-height:calc(100vh - 140px);
+    margin:0;
+    padding:35px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+    display:flex;
+    flex-direction:column;
 }
