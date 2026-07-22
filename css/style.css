@@ -28,10 +28,10 @@ box-shadow:none;
 
 .header{
 background:#58cc02;
-    padding:50px 30px;
-    text-align:center;
-    color:white;
-    border-radius:15px 15px 0 0;
+padding:50px 30px;
+text-align:center;
+color:white;
+border-radius:15px 15px 0 0;
 }
 
 
@@ -79,20 +79,24 @@ font-weight:bold;
 }
 
 .main-btn{
-width:100%;
-padding:16px;
-border-radius:18px;
-background:#58cc02;
-color:white;
-font-size:18px;
+width:420px;
+height:82px;
+border:none;
+border-radius:24px;
+background:white;
+font-size:28px;
+font-weight:bold;
+color:#2b8a00;
+cursor:pointer;
+transition:.3s;
 max-width:450px;
 margin:25px auto 0;
-box-shadow:0 5px 0 #3f9300;
+box-shadow:0 15px 30px rgba(0,0,0,.18);
 }
 
 .main-btn:hover{
-transform:translateY(-2px);
-background:#4db602;
+transform:translateY(-4px);
+box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
 
@@ -104,7 +108,6 @@ border-radius:20px;
 margin-bottom:15px;
 transition:.3s;
 cursor:pointer;
-width:100%;
 }
 
 .language-card:hover{
@@ -252,6 +255,7 @@ padding:20px;
 color:#58cc02;
 font-size:32px;
 margin-bottom:15px;
+width:100%;
 }
 
 .complete p{
