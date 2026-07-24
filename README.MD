@@ -20,6 +20,7 @@ El sistema está dividido en módulos interactivos y dinámicos:
 - CSS3
 - JavaScript
 - Leafleft
+- OpenStreetMap
 
 
 ## Estructura del Proyecto
